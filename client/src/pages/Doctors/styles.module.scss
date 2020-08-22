@@ -1,0 +1,46 @@
+.doctorsWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    .docHeader {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+        h2 {
+            font-weight: 500;
+        }
+        .sortBlock {
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            button {
+                align-items: center;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                display: flex;
+                font-size: 20px;
+                justify-content: center;
+                padding: 4px 10px;
+                text-align: center;
+                margin-left: 10px;
+                width: 44px;
+                height: 44px;
+                transition: all 0.1s ease;
+                cursor: pointer;
+                border-color: #20c0f3;
+                color: #20c0f3;
+                &:hover {
+                    border-color: #20c0f3;
+                    color: #20c0f3;
+                }
+                &.active {
+                    background-color: #20c0f3;
+                    border-color: #20c0f3;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
