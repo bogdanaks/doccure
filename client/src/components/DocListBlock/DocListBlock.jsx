@@ -1,13 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faMapMarkerAlt, faTooth } from '@fortawesome/free-solid-svg-icons'
-import { faComment, faMoneyBillAlt, faThumbsUp } from '@fortawesome/free-regular-svg-icons'
+import {
+    faStar,
+    faMapMarkerAlt,
+    faTooth,
+    faPhone,
+    faVideo,
+} from '@fortawesome/free-solid-svg-icons'
+import {
+    faComment,
+    faMoneyBillAlt,
+    faThumbsUp,
+    faBookmark,
+    faCommentAlt,
+} from '@fortawesome/free-regular-svg-icons'
 
 import styles from './styles.module.scss'
 import doc01 from '../../assets/docs/doc01.jpg'
 
-export const DocListBlock = () => {
+export const DocListBlock = ({ docId }) => {
+    const { id } = useParams()
     return (
         <div className={styles.docBlock}>
             <div className={styles.docInfoLeft}>
@@ -73,9 +86,39 @@ export const DocListBlock = () => {
                             <span>$300 - $1000</span>
                         </li>
                     </ul>
+                    {id && (
+                        <ul className={styles.docRelations}>
+                            <li>
+                                <button className={styles.btnBookmark}>
+                                    <FontAwesomeIcon icon={faBookmark} />
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <FontAwesomeIcon icon={faCommentAlt} />
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <FontAwesomeIcon icon={faPhone} />
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <FontAwesomeIcon icon={faVideo} />
+                                </button>
+                            </li>
+                        </ul>
+                    )}
                     <div className={styles.docBtns}>
-                        <Link className={styles.btnView}>VIEW PROFILE</Link>
-                        <Link className={styles.btnBookAppointment}>BOOK APPOINTMENT</Link>
+                        {!id && (
+                            <Link to={'/doctors/' + docId} className={styles.btnView}>
+                                VIEW PROFILE
+                            </Link>
+                        )}
+                        <Link to="/" className={styles.btnBookAppointment}>
+                            BOOK APPOINTMENT
+                        </Link>
                     </div>
                 </div>
             </div>
