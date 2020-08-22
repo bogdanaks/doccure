@@ -1,0 +1,83 @@
+.docProfileWrapper {
+    padding: 20px 30px;
+    .docContent {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        .btnsMenu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 60px;
+            ul {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-around;
+                height: 100%;
+                border-bottom: 1px solid #f0f0f0;
+                li {
+                    height: 100%;
+                    button {
+                        cursor: pointer;
+                        z-index: 3;
+                        border: 3px solid #fff;
+                        height: 100%;
+                        width: 280px;
+                        color: #3e3e3e;
+                        background-color: transparent;
+                        font-weight: 550;
+                        font-size: 16px;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            background-color: unset;
+                            color: #20c0f3;
+                            border-bottom: 3px solid #ddd;
+                        }
+                        &.active {
+                            color: #20c0f3;
+                            border-bottom: 3px solid #20c0f3;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+        .docOverview {
+            padding: 30px;
+            h4 {
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    flex: 0 33%;
+                    margin: 6px 0;
+                    box-sizing: border-box;
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .docOverviewAbout {
+                margin-bottom: 20px;
+            }
+            .docServices {
+                margin-bottom: 20px;
+            }
+            .docSpecializations {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
