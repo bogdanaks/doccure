@@ -1,0 +1,75 @@
+.navbarWrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: #fff;
+    height: 80px;
+    ul {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        li {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin-left: 10px;
+            height: 100%;
+            color: #2e3842;
+            font-size: 16px;
+            font-weight: 500;
+            &.active {
+                color: #09dca4;
+            }
+            &.contactBlock {
+                color: #069e76;
+                font-weight: 500;
+                display: flex;
+                flex-direction: row;
+                .ico {
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+                .number {
+                    display: flex;
+                    flex-direction: column;
+                    span:first-child {
+                        font-weight: 400;
+                    }
+                    span {
+                        font-size: 16px;
+                        color: #2e3842;
+                    }
+                }
+            }
+            .loginBtn {
+                border: 2px solid #09dca4;
+                border-radius: 4px;
+                padding: 15px 15px;
+                box-sizing: border-box;
+                text-align: center;
+                color: #09e5ab;
+                text-transform: uppercase;
+                font-weight: 500;
+                background-color: transparent;
+                span {
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .rightBtns {
+        margin-left: auto;
+    }
+    .logo {
+        width: 160px;
+        margin-right: 20px;
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+    }
+}
