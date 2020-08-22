@@ -21,8 +21,8 @@ export const Doctors = () => {
                 </div>
             </div>
             <div className={styles.docContent}>
-                <DocListBlock />
-                <DocListBlock />
+                <DocListBlock docId={1} />
+                <DocListBlock docId={2} />
             </div>
         </div>
     )
