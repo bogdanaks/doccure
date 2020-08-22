@@ -19,8 +19,22 @@
             color: #2e3842;
             font-size: 16px;
             font-weight: 500;
-            &.active {
-                color: #09dca4;
+            a {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                text-decoration: none;
+                transition: all 0.4s ease;
+                color: #2e3842;
+                &.active {
+                    text-decoration: none;
+                    color: #09dca4;
+                }
+            }
+            &:hover {
+                a {
+                    color: #09dca4;
+                }
             }
             &.contactBlock {
                 color: #069e76;
