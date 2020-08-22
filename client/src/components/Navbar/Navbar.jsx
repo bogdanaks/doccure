@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -12,8 +13,16 @@ export const Navbar = () => {
                 <img src={logo} alt="Logo" />
             </div>
             <ul className={styles.leftBtns}>
-                <li className={styles.active}>Home</li>
-                <li>Doctors</li>
+                <li>
+                    <NavLink to="/" activeClassName={styles.active} exact>
+                        Home
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/doctors" activeClassName={styles.active} exact>
+                        Doctors
+                    </NavLink>
+                </li>
             </ul>
             <ul className={styles.rightBtns}>
                 <li className={styles.contactBlock}>
