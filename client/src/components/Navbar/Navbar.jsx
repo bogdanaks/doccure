@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -35,9 +35,9 @@ export const Navbar = () => {
                     </div>
                 </li>
                 <li>
-                    <button className={styles.loginBtn}>
+                    <Link to="/auth" className={styles.loginBtn}>
                         <span>Login / Signup</span>
-                    </button>
+                    </Link>
                 </li>
             </ul>
         </div>
