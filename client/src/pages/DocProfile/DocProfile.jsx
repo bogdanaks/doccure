@@ -6,10 +6,11 @@ import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import styles from './styles.module.scss'
 
 import { DocListBlock } from '../../components/DocListBlock/DocListBlock'
+import { DocComment } from '../../components/DocComment/DocComment'
 
 export const DocProfile = () => {
     const { docId } = useParams()
-    const [selectMenu, setSelectMenu] = React.useState(1)
+    const [selectMenu, setSelectMenu] = React.useState(2)
     const handleSelectMenu = (e) => {
         setSelectMenu(Number(e.target.name))
     }
@@ -121,7 +122,7 @@ export const DocProfile = () => {
                 )}
                 {selectMenu === 2 && (
                     <div className={styles.docReviews}>
-                        <h1>awd</h1>
+                        <DocComment />
                     </div>
                 )}
                 {selectMenu === 3 && (
