@@ -1,0 +1,45 @@
+.commentWrapper {
+    display: flex;
+    flex-direction: row;
+    .photoBlock {
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+        .photo {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            .name {
+                font-size: 20px;
+            }
+        }
+        .date {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #757575;
+        }
+        .title {
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #20c0f3;
+        }
+        .message {
+            color: #757575;
+        }
+    }
+}
