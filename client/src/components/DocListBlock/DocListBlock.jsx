@@ -1,13 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faStar,
-    faMapMarkerAlt,
-    faTooth,
-    faPhone,
-    faVideo,
-} from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt, faTooth, faPhone, faVideo } from '@fortawesome/free-solid-svg-icons'
 import {
     faComment,
     faMoneyBillAlt,
@@ -18,6 +12,8 @@ import {
 
 import styles from './styles.module.scss'
 import doc01 from '../../assets/docs/doc01.jpg'
+
+import { RatingStars } from '../../components/RatingStars/RatingStars'
 
 export const DocListBlock = ({ docId }) => {
     const { id } = useParams()
@@ -36,24 +32,7 @@ export const DocListBlock = ({ docId }) => {
                         <FontAwesomeIcon icon={faTooth} />
                         <span>Dentist</span>
                     </div>
-                    <div className={styles.docRating}>
-                        <div className={styles.star}>
-                            <FontAwesomeIcon icon={faStar} />
-                        </div>
-                        <div className={styles.star}>
-                            <FontAwesomeIcon icon={faStar} />
-                        </div>
-                        <div className={styles.star}>
-                            <FontAwesomeIcon icon={faStar} />
-                        </div>
-                        <div className={styles.star}>
-                            <FontAwesomeIcon icon={faStar} />
-                        </div>
-                        <div className={[styles.star, styles.starDis].join(' ')}>
-                            <FontAwesomeIcon icon={faStar} />
-                        </div>
-                        <span>(17)</span>
-                    </div>
+                    <RatingStars rating={4} isOverall />
                     <div className={styles.docGeo}>
                         <FontAwesomeIcon icon={faMapMarkerAlt} />
                         <span>Florida, USA</span>
