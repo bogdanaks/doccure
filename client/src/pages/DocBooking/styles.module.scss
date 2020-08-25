@@ -1,0 +1,32 @@
+.docBooking {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    .contentWrapper {
+        width: 1000px;
+    }
+    .header {
+        display: flex;
+        justify-content: center;
+        .docProfile {
+            width: 1000px;
+            background-color: #fff;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.25rem;
+            display: flex;
+            align-self: center;
+            margin-bottom: 20px;
+            .photo {
+                display: flex;
+                width: 110px;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
