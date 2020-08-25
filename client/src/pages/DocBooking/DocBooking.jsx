@@ -32,6 +32,7 @@ export const DocBooking = () => {
                     <span>Monday</span>
                 </div>
                 <DocBookingTable />
+                <button className={styles.btnPay}>Proceed to Pay</button>
             </div>
         </div>
     )
