@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { Navbar } from './components/Navbar/Navbar'
+import { Footer } from './components/Footer/Footer'
 import { Main } from './pages/Main/Main'
 import { Auth } from './pages/Auth/Auth'
 import { Doctors } from './pages/Doctors/Doctors'
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/doctors/:id" component={DocProfile} exact />
                     <Route path="/doctors/:id/booking" component={DocBooking} exact />
                 </Switch>
+                <Footer />
             </Router>
         </div>
     )
