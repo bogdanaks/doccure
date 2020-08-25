@@ -27,6 +27,36 @@
                     border-radius: 4px;
                 }
             }
+            .docInfo {
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+
+                h4 {
+                    color: #2e3842;
+                    font-weight: 500;
+                    font-size: 17px;
+                    margin-bottom: 5px;
+                }
+                .docInfoLocation {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    color: #757575;
+
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .todayDate {
+        margin-bottom: 20px;
+        h4 {
+            color: #272b41;
+            font-weight: 500;
+            font-size: 17px;
         }
     }
 }
