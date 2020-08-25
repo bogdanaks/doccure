@@ -6,6 +6,7 @@ import { Main } from './pages/Main/Main'
 import { Auth } from './pages/Auth/Auth'
 import { Doctors } from './pages/Doctors/Doctors'
 import { DocProfile } from './pages/DocProfile/DocProfile'
+import { DocBooking } from './pages/DocBooking/DocBooking'
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/auth" component={Auth} exact />
                     <Route path="/doctors" component={Doctors} exact />
                     <Route path="/doctors/:id" component={DocProfile} exact />
+                    <Route path="/doctors/:id/booking" component={DocBooking} exact />
                 </Switch>
             </Router>
         </div>
