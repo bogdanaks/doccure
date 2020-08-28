@@ -1,0 +1,108 @@
+.authWrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: #fff;
+    flex-wrap: wrap;
+    justify-content: center;
+    .authBanner {
+        display: flex;
+        flex: 0 0 30%;
+        padding: 0 20px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .loginForm {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 30%;
+        padding: 0 20px;
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        border-radius: 4px;
+        padding: 25px;
+        .headerForm {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            h4 {
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .choiseType {
+                color: #0de0fe;
+                font-size: 15px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #3d3d3d;
+            display: inline-block;
+            font-size: 13px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            align-self: flex-end;
+        }
+        .inputForm {
+            display: flex;
+            height: 50px;
+            width: 100%;
+            margin-bottom: 15px;
+            input {
+                height: 100%;
+                width: 100%;
+                border-color: #dcdcdc;
+                color: #333;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #495057;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                padding: 10px;
+                box-sizing: border-box;
+                &:focus {
+                    border-color: #bbb;
+                    box-shadow: none;
+                    outline: 0 none;
+                }
+            }
+        }
+        .loginBtn {
+            background-color: #09e5ab;
+            border: 1px solid #09e5ab;
+            font-size: 18px;
+            font-weight: 500;
+            width: 100%;
+            cursor: pointer;
+            line-height: 1.5;
+            border-radius: 0.3rem;
+            color: #fff;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            margin-bottom: 15px;
+        }
+        hr {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            color: rgba(0, 0, 0, 0.5);
+            opacity: 0.2;
+        }
+        .regLinkBlock {
+            align-self: center;
+            font-size: 13px;
+            .regLink {
+                color: #09dca4;
+            }
+        }
+    }
+}
