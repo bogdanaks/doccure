@@ -10,7 +10,7 @@ import { DocComment } from '../../components/DocComment/DocComment'
 
 export const DocProfile = () => {
     const { docId } = useParams()
-    const [selectMenu, setSelectMenu] = React.useState(2)
+    const [selectMenu, setSelectMenu] = React.useState(1)
     const handleSelectMenu = (e) => {
         setSelectMenu(Number(e.target.name))
     }
@@ -123,11 +123,53 @@ export const DocProfile = () => {
                 {selectMenu === 2 && (
                     <div className={styles.docReviews}>
                         <DocComment />
+                        <DocComment />
                     </div>
                 )}
                 {selectMenu === 3 && (
                     <div className={styles.docHours}>
-                        <h2>12</h2>
+                        <div className={styles.workingTime}>
+                            <div className={styles.workingTimeHeader}>
+                                <div className={styles.today}>
+                                    <h4>Today</h4>
+                                    <span>23 Aug 2020</span>
+                                </div>
+                                <div className={styles.todayWork}>
+                                    <span className={styles.openNow}>Open Now</span>
+                                    <span className={styles.timeSpan}>07:00 AM - 09:00 PM</span>
+                                </div>
+                            </div>
+                            <div className={styles.workingTimeWeek}>
+                                <div className={styles.rowWeek}>
+                                    <h4>Monday</h4>
+                                    <span className={styles.timeSpan}>07:00 AM - 09:00 PM</span>
+                                </div>
+                                <div className={styles.rowWeek}>
+                                    <h4>Tuesday</h4>
+                                    <span className={styles.timeSpan}>07:00 AM - 09:00 PM</span>
+                                </div>
+                                <div className={styles.rowWeek}>
+                                    <h4>Wednesday</h4>
+                                    <span className={styles.timeSpan}>07:00 AM - 09:00 PM</span>
+                                </div>
+                                <div className={styles.rowWeek}>
+                                    <h4>Thursday</h4>
+                                    <span className={styles.timeSpan}>07:00 AM - 09:00 PM</span>
+                                </div>
+                                <div className={styles.rowWeek}>
+                                    <h4>Friday</h4>
+                                    <span className={styles.timeSpan}>07:00 AM - 09:00 PM</span>
+                                </div>
+                                <div className={styles.rowWeek}>
+                                    <h4>Saturday</h4>
+                                    <span className={styles.timeSpan}>07:00 AM - 09:00 PM</span>
+                                </div>
+                                <div className={styles.rowWeek}>
+                                    <h4>Sunday</h4>
+                                    <span className={styles.close}>Closed</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 )}
             </div>
